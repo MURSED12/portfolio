@@ -1,3 +1,4 @@
+/* ===== GLOBAL RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== BACKGROUND CANVAS ===== */
 #bgCanvas {
   position: fixed;
   top: 0;
@@ -61,7 +63,6 @@ body {
   animation: rotate 5s linear infinite;
 }
 
-/* Animations for Logo */
 @keyframes shine {
   0% { filter: brightness(1); }
   50% { filter: brightness(1.3); }
@@ -73,6 +74,7 @@ body {
   100% { transform: rotate(360deg); }
 }
 
+/* ===== NAV LINKS ===== */
 .nav-links {
   display: flex;
   list-style: none;
@@ -281,37 +283,6 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 0 40px #ff5fd9;
 }
-.project-list::-webkit-scrollbar {
-  height: 8px;
-}
-.project-list::-webkit-scrollbar-thumb {
-  background: #b026ff;
-  border-radius: 10px;
-}
-
-/* ===== TESTIMONIAL ===== */
-.testimonials {
-  text-align: center;
-  padding: 6rem 5%;
-  background: radial-gradient(circle at center, #330058, #1a002d);
-}
-.testimonial-card {
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 95, 217, 0.2);
-}
-.testimonial-card p {
-  font-style: italic;
-  color: #ddd;
-  margin-bottom: 1rem;
-}
-.testimonial-card h4 {
-  color: #ff5fd9;
-}
 
 /* ===== CONTACT ===== */
 .contact {
@@ -374,26 +345,141 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  body {
+    background: radial-gradient(circle at bottom, #3a006b, #1a002d 80%);
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    background: rgba(25, 0, 45, 0.8);
+    text-align: center;
+  }
+
+  .brand-logo {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 8rem 1rem 4rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-avatar img {
+    width: 230px;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 1rem;
+  }
+
+  .avatar-bg {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-content {
+    padding: 1.5rem;
+  }
+
+  .services {
+    padding: 4rem 1rem;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    padding: 4rem 1rem;
+  }
+
+  .project-card {
+    min-width: 100%;
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .footer-icons a {
+    font-size: 22px;
+  }
+}
+
 @media (min-width: 769px) {
+  .navbar {
+    background: rgba(25, 0, 45, 0.85);
+    padding: 1rem 3rem;
+    height: 70px;
+    justify-content: space-between;
+    box-shadow: 0 2px 15px rgba(255, 95, 217, 0.15);
+  }
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .hero-avatar img {
+    width: 340px;
+  }
+
   .about-container {
     flex-direction: row;
     text-align: left;
   }
+
   .avatar-bg {
     width: 300px;
     height: 300px;
   }
-  .about-content {
-    max-width: 550px;
-  }
+
   .contact form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .contact input {
     width: 220px;
   }
+
   .contact textarea {
     width: 300px;
   }
