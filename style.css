@@ -179,6 +179,7 @@ body {
   box-shadow: 0 0 35px #ff5fd9aa;
   overflow: hidden;
   animation: float 4s ease-in-out infinite;
+  transform: translateX(20px);
 }
 
 .avatar-bg img {
