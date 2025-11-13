@@ -32,6 +32,19 @@ body {
   z-index: -1;
 }
 
+/* ===== CURSOR GLOW ===== */
+.cursor-glow {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background: #8EB69B;
+  border-radius: 50%;
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 2000;
+  transform: translate(-50%, -50%);
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
@@ -54,7 +67,7 @@ body {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* ===== BRAND LOGO ===== */
+/* ===== LOGO ===== */
 .brand-logo {
   font-weight: 700;
   font-size: 1.6rem;
@@ -66,7 +79,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 3s infinite linear;
-  cursor: default;
 }
 
 .brand-logo span {
@@ -119,11 +131,12 @@ body {
   padding: calc(70px + 10rem) 5% 5rem;
   flex-wrap: wrap;
 }
+
 .hero-content {
   max-width: 550px;
 }
-.hero h1 span,
-#typing {
+
+.hero h1 span {
   color: #8EB69B;
   text-shadow: 0 0 15px #8EB69B;
   font-weight: 700;
@@ -138,6 +151,7 @@ body {
 .hero h2 span {
   color: #8EB69B;
 }
+
 .hero-avatar img {
   width: 340px;
   filter: drop-shadow(0 0 30px #8EB69B);
@@ -160,10 +174,12 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
 }
+
 .primary {
   background: linear-gradient(90deg, #8EB69B, #235347);
   box-shadow: 0 0 20px #8EB69B;
 }
+
 .secondary {
   border: 1px solid #8EB69B;
   color: #DAF1DE;
@@ -183,18 +199,8 @@ body {
   background: radial-gradient(circle at top right, #0B2B26, #051F20);
   flex-wrap: wrap;
   gap: 4rem;
-  text-align: left;
 }
 
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
-
-/* ===== AVATAR IMAGE (LEFT SIDE) ===== */
 .avatar-bg {
   display: flex;
   justify-content: center;
@@ -206,7 +212,6 @@ body {
   box-shadow: 0 0 35px #235347aa;
   overflow: hidden;
   animation: float 4s ease-in-out infinite, avatarGlow 3s ease-in-out infinite;
-  transform: translateX(20px);
 }
 
 @keyframes avatarGlow {
@@ -221,7 +226,6 @@ body {
   border-radius: 50%;
 }
 
-/* ===== ABOUT TEXT (RIGHT SIDE) ===== */
 .about-content {
   max-width: 550px;
   padding: 2.5rem;
@@ -240,7 +244,6 @@ body {
 .about-content p {
   margin-bottom: 1rem;
   line-height: 1.6;
-  color: #DAF1DE;
 }
 
 /* ===== SKILLS ===== */
@@ -250,6 +253,7 @@ body {
   flex-wrap: wrap;
   margin-top: 1rem;
 }
+
 .skill-icon {
   display: inline-flex;
   align-items: center;
@@ -258,18 +262,15 @@ body {
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #051F20;
   background: #8EB69B;
+  color: #051F20;
   box-shadow: 0 0 12px rgba(142, 182, 155, 0.3);
   transition: 0.3s;
 }
+
 .skill-icon:hover {
   transform: translateY(-4px) scale(1.05);
 }
-.figma { background: linear-gradient(90deg, #235347, #8EB69B); }
-.ps    { background: linear-gradient(90deg, #163832, #0B2B26); }
-.xd    { background: linear-gradient(90deg, #235347, #8EB69B); }
-.ai    { background: linear-gradient(90deg, #8EB69B, #DAF1DE); }
 
 /* ===== SERVICES ===== */
 .services {
@@ -277,24 +278,28 @@ body {
   padding: 6rem 5%;
   background: radial-gradient(circle at top right, #163832, #0B2B26);
 }
+
 .services h2 {
   font-size: 2.2rem;
   color: #8EB69B;
   margin-bottom: 2rem;
 }
+
 .service-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
+
 .card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem 1.5rem;
   border-radius: 18px;
-  box-shadow: 0 0 25px rgba(142, 182, 155, 0.2);
   transition: 0.3s;
+  box-shadow: 0 0 25px rgba(142, 182, 155, 0.2);
 }
+
 .card:hover {
   box-shadow: 0 0 40px #8EB69B;
   transform: translateY(-8px);
@@ -306,28 +311,27 @@ body {
   padding: 6rem 5%;
   background: radial-gradient(circle at bottom left, #235347, #0B2B26);
 }
+
 .projects h2 {
   color: #8EB69B;
   margin-bottom: 2rem;
 }
+
 .project-list {
   display: flex;
   gap: 1.2rem;
   overflow-x: auto;
-  scroll-behavior: smooth;
   padding-bottom: 1rem;
-  justify-content: flex-start;
 }
+
 .project-card {
   background: rgba(255, 255, 255, 0.08);
   padding: 2rem;
   min-width: 240px;
-  flex-shrink: 0;
   border-radius: 18px;
-  transition: 0.3s;
   box-shadow: 0 0 25px rgba(142, 182, 155, 0.15);
-  text-align: center;
 }
+
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 40px #8EB69B;
@@ -339,10 +343,12 @@ body {
   padding: 6rem 5%;
   background: radial-gradient(circle at top, #163832, #051F20);
 }
+
 .contact h2 {
   color: #8EB69B;
   margin-bottom: 2rem;
 }
+
 .contact input,
 .contact textarea {
   background: rgba(255, 255, 255, 0.1);
@@ -352,20 +358,18 @@ body {
   width: 90%;
   max-width: 400px;
   color: #DAF1DE;
-  font-size: 1rem;
-  resize: none;
 }
+
 .contact button {
   background: linear-gradient(90deg, #8EB69B, #235347);
-  border: none;
   padding: 12px 28px;
-  color: #051F20;
+  border: none;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
   margin-top: 1rem;
 }
+
 .contact button:hover {
   transform: scale(1.1);
 }
@@ -376,12 +380,14 @@ body {
   padding: 3rem 1rem;
   text-align: center;
 }
+
 .footer-icons a {
   color: #DAF1DE;
   margin: 0 10px;
   font-size: 25px;
   transition: 0.3s;
 }
+
 .footer-icons a:hover {
   color: #8EB69B;
   transform: scale(1.2);
@@ -389,9 +395,6 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  body {
-    background: radial-gradient(circle at bottom, #0B2B26, #051F20 80%);
-  }
 
   .navbar {
     flex-direction: column;
@@ -405,15 +408,8 @@ body {
   }
 
   .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 10px;
-  }
-
-  .nav-links li a {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-    border-radius: 6px;
+    justify-content: center;
   }
 
   .hero {
@@ -427,30 +423,10 @@ body {
     margin-top: 1.5rem;
   }
 
-  .btn {
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-  }
-
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 5rem 1rem;
-  }
-
-  .about-content {
-    text-align: center;
-  }
-
   .avatar-bg {
-    margin: 0 auto 2rem auto;
     width: 180px;
     height: 180px;
-  }
-
-  .services, .projects, .contact {
-    padding: 4rem 1rem;
+    margin: 0 auto 2rem auto;
   }
 
   .service-cards {
@@ -460,9 +436,4 @@ body {
   .project-card {
     min-width: 100%;
   }
-
-  .footer-icons a {
-    font-size: 22px;
-  }
 }
-
