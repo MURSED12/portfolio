@@ -107,7 +107,7 @@ body {
   box-shadow: 0 0 12px #8EB69B66;
 }
 
-/* ================= HERO FIXED ================= */
+/* ================= HERO ================= */
 .hero {
   display: flex;
   align-items: center;
@@ -181,7 +181,7 @@ body {
   transform: scale(1.07) translateY(-3px);
 }
 
-/* Social icons FIX */
+/* Social icons */
 .socials i {
   font-size: 25px;
   margin: 12px 8px;
@@ -193,7 +193,7 @@ body {
   color: #DAF1DE;
 }
 
-/* ================= ABOUT FIX ================= */
+/* ================= ABOUT ================= */
 .about-section {
   padding: 7rem 5%;
   display: flex;
@@ -222,7 +222,24 @@ body {
   backdrop-filter: blur(15px);
 }
 
-/* ================= PROJECT SCROLL FIX ================= */
+/* Skills */
+.skills { 
+  margin-top: 12px; 
+  display:flex; 
+  gap:8px; 
+  flex-wrap:wrap;
+}
+
+.skill-icon {
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: rgba(142,182,155,0.95);
+  color: #051F20;
+  font-weight:600;
+  box-shadow: 0 6px 18px rgba(11,43,38,0.12);
+}
+
+/* ================= PROJECT SCROLL ================= */
 .project-list {
   display: flex;
   gap: 1.2rem;
@@ -268,6 +285,31 @@ body {
 }
 
 .footer-icons i:hover { transform: scale(1.2); }
+
+/* ================= MOBILE TAP FEEDBACK ================= */
+.nav-links a:active,
+.btn:active,
+.project-card:active {
+  transform: scale(0.98);
+  filter: brightness(0.9);
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+/* ================= ACCESSIBILITY ================= */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px solid rgba(142,182,155,0.35);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ================= REDUCE MOTION SUPPORT ================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
