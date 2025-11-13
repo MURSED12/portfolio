@@ -396,22 +396,32 @@ body {
   transform: scale(1.2);
 }
 
-/* ===== RESPONSIVE (UPDATED — navbar slim) ===== */
+/* ===== RESPONSIVE (FINAL FIX) ===== */
 @media (max-width: 768px) {
 
   .navbar {
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px 15px;
-    justify-content: space-between;
+    text-align: center;
+    gap: 10px;
   }
 
   .brand-logo {
     font-size: 1.25rem;
+    justify-content: center;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-links {
-    gap: 10px;
+    width: 100%;
     justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
   .hero {
