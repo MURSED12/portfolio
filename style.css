@@ -8,9 +8,18 @@
 }
 
 body {
-  background: radial-gradient(circle at top right, #051F20, #0B2B26 70%);
+  background: linear-gradient(120deg, #051F20, #0B2B26, #163832);
+  background-size: 300% 300%;
+  animation: bgMove 12s ease infinite;
   color: #DAF1DE;
   overflow-x: hidden;
+  cursor: none;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ===== BACKGROUND CANVAS ===== */
@@ -36,6 +45,13 @@ body {
   padding: 1rem 3rem;
   z-index: 1000;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: navDrop .7s ease forwards;
+}
+
+@keyframes navDrop {
+  0% { transform: translateY(-25px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 /* ===== BRAND LOGO ===== */
@@ -111,7 +127,14 @@ body {
   color: #8EB69B;
   text-shadow: 0 0 15px #8EB69B;
   font-weight: 700;
+  animation: neonPulse 2.2s infinite ease-in-out;
 }
+
+@keyframes neonPulse {
+  0%, 100% { text-shadow: 0 0 12px #8EB69B; }
+  50% { text-shadow: 0 0 22px #DAF1DE; }
+}
+
 .hero h2 span {
   color: #8EB69B;
 }
@@ -120,6 +143,7 @@ body {
   filter: drop-shadow(0 0 30px #8EB69B);
   animation: float 3s ease-in-out infinite;
 }
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -144,8 +168,10 @@ body {
   border: 1px solid #8EB69B;
   color: #DAF1DE;
 }
+
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 6px 25px #8EB69Baa;
 }
 
 /* ===== ABOUT ===== */
@@ -179,8 +205,13 @@ body {
   background: radial-gradient(circle, #235347, #163832);
   box-shadow: 0 0 35px #235347aa;
   overflow: hidden;
-  animation: float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite, avatarGlow 3s ease-in-out infinite;
   transform: translateX(20px);
+}
+
+@keyframes avatarGlow {
+  0%, 100% { box-shadow: 0 0 20px #163832; }
+  50% { box-shadow: 0 0 35px #8EB69B; }
 }
 
 .avatar-bg img {
@@ -236,9 +267,9 @@ body {
   transform: translateY(-4px) scale(1.05);
 }
 .figma { background: linear-gradient(90deg, #235347, #8EB69B); }
-.ps { background: linear-gradient(90deg, #163832, #0B2B26); }
-.xd { background: linear-gradient(90deg, #235347, #8EB69B); }
-.ai { background: linear-gradient(90deg, #8EB69B, #DAF1DE); }
+.ps    { background: linear-gradient(90deg, #163832, #0B2B26); }
+.xd    { background: linear-gradient(90deg, #235347, #8EB69B); }
+.ai    { background: linear-gradient(90deg, #8EB69B, #DAF1DE); }
 
 /* ===== SERVICES ===== */
 .services {
@@ -322,13 +353,18 @@ body {
   max-width: 400px;
   color: #DAF1DE;
   font-size: 1rem;
+  resize: none;
 }
 .contact button {
   background: linear-gradient(90deg, #8EB69B, #235347);
+  border: none;
+  padding: 12px 28px;
   color: #051F20;
   border-radius: 25px;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 1rem;
 }
 .contact button:hover {
   transform: scale(1.1);
@@ -342,6 +378,7 @@ body {
 }
 .footer-icons a {
   color: #DAF1DE;
+  margin: 0 10px;
   font-size: 25px;
   transition: 0.3s;
 }
@@ -428,3 +465,4 @@ body {
     font-size: 22px;
   }
 }
+
