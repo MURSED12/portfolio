@@ -73,7 +73,7 @@ body {
 
 /* Logo Glow */
 .brand-logo {
-  font-weight: 800;
+  font-weight: 900;
   font-size: 1.7rem;
   letter-spacing: 1.5px;
   background: linear-gradient(90deg, #d8ffe9, #9adbb5, #d8ffe9);
@@ -347,8 +347,8 @@ body {
 
   .navbar {
     flex-direction: column;
-    gap: 10px;
-    padding: 12px 20px;
+    gap: 8px;
+    padding: 10px 15px;
   }
 
   .brand-logo {
@@ -358,7 +358,7 @@ body {
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .hero {
