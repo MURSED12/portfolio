@@ -398,7 +398,7 @@ body {
 
   .navbar {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.6rem 1rem;
     text-align: center;
   }
 
