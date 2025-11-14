@@ -174,7 +174,18 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
 }
+.socials a {
+  color: #DAF1DE;
+  font-size: 1.25rem;   /* perfect medium size */
+  margin: 0 6px;
+  transition: 0.3s;
+}
 
+.socials a:hover {
+  color: #8EB69B;
+  text-shadow: 0 0 8px #8EB69B;
+  transform: scale(1.08);
+}
 .primary {
   background: linear-gradient(90deg, #8EB69B, #235347);
   box-shadow: 0 0 20px #8EB69B;
