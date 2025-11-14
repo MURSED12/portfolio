@@ -154,6 +154,7 @@ body {
 
 .hero-avatar img {
   width: 340px;
+  border-radius: 25px;
   filter: drop-shadow(0 0 30px #8EB69B);
   animation: float 3s ease-in-out infinite;
 }
@@ -419,7 +420,7 @@ body {
   }
 
   .nav-links {
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
   }
 
