@@ -13,7 +13,7 @@ body {
   animation: bgMove 12s ease infinite;
   color: #DAF1DE;
   overflow-x: hidden;
-  cursor: none;
+
 }
 
 @keyframes bgMove {
